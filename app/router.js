@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('band', { path: ':slug' }, function() {
       this.route('songs');
       this.route('albums');
+      this.route('details');
     });
   });
 });
