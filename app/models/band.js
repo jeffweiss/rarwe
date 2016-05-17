@@ -1,18 +1,9 @@
-import Ember from 'ember';
+import DS from 'ember-data';
 
-export default Ember.Object.extend({
-  name: '',
-  description: '',
+export default DS.Model.extend({
+  name:        DS.attr('string'),
+  description: DS.attr(),
+  songs:       DS.hasMany('songs'),
 
-  slug: Ember.computed('name', function() {
-    console.log('Recomputing slug');
-    return this.get('name').dasherize();
-  }),
-
-  setupSongs: Ember.on('init', function() {
-    if (!this.get('songs')) {
-      this.set('songs', []);
-    }
-  })
 });
 
