@@ -7,6 +7,9 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     apiHost: 'http://json-api.rockandrollwithemberjs.com',
+    namespace: '',
+    // apiHost: 'http://localhost:4000',
+    // namespace: 'api',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -33,6 +36,7 @@ module.exports = function(environment) {
     ENV.baseURL = '/';
     ENV.locationType = 'none';
     ENV.apiHost = '';
+    ENV.namespace = '';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
